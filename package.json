@@ -1,0 +1,25 @@
+{
+    "name": "imp-language-support",
+    "displayName": "Imp Language Support",
+    "description": "A syntax highlighter for an educational imperative language called Imp, used to teach Translators Design at Technical University of Cluj-Napoca.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.61.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "imp",
+            "aliases": ["Imp", "imp"],
+            "extensions": [".imp"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "imp",
+            "scopeName": "source.imp",
+            "path": "./syntaxes/imp.tmLanguage.json"
+        }]
+    }
+}

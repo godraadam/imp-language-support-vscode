@@ -1,0 +1,58 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "Imp",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.imp",
+          "match": "\\b(if|else|while|for|return|let)\\b"
+        },
+        {
+          "name": "entity.name.type",
+          "match": "\\b(int|str|chr)\\b"
+        },
+        {
+          "name": "entity.name.function",
+          "match": "\\b(func)\\b"
+        },
+        {
+          "name": "constant.numeric",
+          "match": "\\b(0|[1-9][0-9]*)\\b"
+        },
+        {
+          "name": "constant.character",
+          "match": "\\b('[a-zA-z]')\\b"
+        },
+        {
+          "name": "string",
+          "match": "\\b(\".*\")\\b"
+        },
+        {
+          "name": "keyword.operator",
+          "match": "\\b([+-/*%])\\b"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.imp",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.imp",
+          "match": "\\\\."
+        }
+      ]
+    }
+  },
+  "scopeName": "source.imp"
+}
